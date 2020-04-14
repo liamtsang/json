@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="stylesheet.css">
+  <title></title>
+</head>
+
+<body>
+  <div id="grid">
+    <div id="video">
+      <h2 id="title">Video</h2>
+    </div>
+    <div id="music">
+      <h2 id="title">Music</h2>
+    </div>
+    <div id="games">
+      <h2 id="title">Games</h2>
+    </div>
+    <div id="retail">
+      <h2 id="title">Retail</h2>
+    </div>
+  </div>
+  <div id="cost">
+    <h1>Monthly Cost:</h3>
+    <h2 id="monthlycost"></h2>
+    <h1>Yearly Cost:</h3>
+    <h2 id="yearlycost"></h2>
+  </div>
+</body>
+</html>
+
+<script>
+  let data = '[ { "Name":"Netflix", "Price":12.99, "Type":"video" }, { "Name":"Hulu", "Price":5.99, "Type":"video" }, { "Name":"Disney+", "Price":6.99, "Type":"video" }, { "Name":"Youtube Premium", "Price":11.99, "Type":"video" }, { "Name":"Prime Video", "Price":8.99, "Type":"video" }, { "Name":"Spotify", "Price":9.99, "Type":"music" }, { "Name":"Apple Music", "Price":9.99, "Type":"music" }, { "Name":"SoundCloud Go", "Price":4.99, "Type":"music" }, { "Name":"Tidal", "Price":9.99, "Type":"music" }, { "Name":"Xbox Live", "Price":9.99, "Type":"games" }, { "Name":"Playstation Plus", "Price":9.99, "Type":"games" }, { "Name":"Nintendo Online", "Price":3.99, "Type":"games" }, { "Name":"Amazon Prime", "Price":12.99, "Type":"retail" }, { "Name":"Costco", "Price":9.99, "Type":"retail" } ]'
+  
+  let monthlycost = 0;
+  let json = JSON.parse(data);
+  videodiv = document.getElementById("video");
+  musicdiv = document.getElementById("music");
+  gamesdiv = document.getElementById("games");
+  retaildiv = document.getElementById("retail");
+  
+  function addcost(c) {
+    monthlycost = monthlycost + c;
+    console.log(c)
+    mcost = document.getElementById("monthlycost");
+    ycost = document.getElementById("yearlycost");
+    mcost.innerHTML = ("$"+ Math.round(monthlycost));
+    ycost.innerHTML = ("$"+Math.round(monthlycost*12));
+  }
+  
+  function vcreatecard(n, p) {
+    var title = document.createElement("H4");
+    var price = document.createElement("H4");
+    var div = document.createElement("DIV");
+    title.innerHTML = n;
+    price.innerHTML = p;
+    div.appendChild(title);
+    div.appendChild(price);
+    div.onclick = function(){addcost(p)};
+    videodiv.appendChild(div);
+  }
+  
+  function mcreatecard(n, p) {
+    var title = document.createElement("H4");
+    var price = document.createElement("H4");
+    var div = document.createElement("DIV");
+    title.innerHTML = n;
+    price.innerHTML = p;
+    div.appendChild(title);
+    div.appendChild(price);
+    div.onclick = function(){addcost(p)};
+    musicdiv.appendChild(div);
+  }
+  
+  function gcreatecard(n, p) {
+    var title = document.createElement("H4");
+    var price = document.createElement("H4");
+    var div = document.createElement("DIV");
+    title.innerHTML = n;
+    price.innerHTML = p;
+    div.appendChild(title);
+    div.appendChild(price);
+    div.onclick = function(){addcost(p)};
+    gamesdiv.appendChild(div);
+  }
+  
+  function rcreatecard(n, p) {
+    var title = document.createElement("H4");
+    var price = document.createElement("H4");
+    var div = document.createElement("DIV");
+    title.innerHTML = n;
+    price.innerHTML = p;
+    div.appendChild(title);
+    div.appendChild(price);
+    div.onclick = function(){addcost(p)};
+    retaildiv.appendChild(div);
+  }
+  
+  
+  for (var obj of json) {
+    if (obj['Type'] == "video") {
+      let n = obj['Name'];
+      let p = obj['Price'];
+      vcreatecard(n,p);
+    }
+    if (obj['Type'] == "music") {
+      let n = obj['Name'];
+      let p = obj['Price'];
+      mcreatecard(n,p);
+    }
+    if (obj['Type'] == "games") {
+      let n = obj['Name'];
+      let p = obj['Price'];
+      gcreatecard(n,p);
+    }
+    if (obj['Type'] == "retail") {
+      let n = obj['Name'];
+      let p = obj['Price'];
+      rcreatecard(n,p);
+    }
+  }
+</script>

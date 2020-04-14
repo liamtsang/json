@@ -1,0 +1,75 @@
+[ {
+  "Name":"Netflix",
+  "Price":12.99,
+  "Type":"video"
+},
+{
+  "Name":"Hulu",
+  "Price":5.99,
+  "Type":"video"
+},
+{
+  "Name":"Disney+",
+  "Price":6.99,
+  "Type":"video"
+},
+{
+  "Name":"Youtube Premium",
+  "Price":11.99,
+  "Type":"video"
+},
+{
+  "Name":"Prime Video",
+  "Price":8.99,
+  "Type":"video"
+},
+{
+  "Name":"Spotify",
+  "Price":9.99,
+  "Type":"music"
+},
+{
+  "Name":"Apple Music",
+  "Price":9.99,
+  "Type":"music"
+},
+{
+  "Name":"SoundCloud Go",
+  "Price":4.99,
+  "Type":"music"
+},
+{
+  "Name":"Tidal",
+  "Price":9.99,
+  "Type":"music"
+},
+{
+  "Name":"Xbox Live",
+  "Price":9.99,
+  "Type":"games"
+},
+{
+  "Name":"Playstation Plus",
+  "Price":9.99,
+  "Type":"games"
+},
+{
+  "Name":"Nintendo Online",
+  "Price":3.99,
+  "Type":"games"
+},
+{
+  "Name":"Amazon Prime",
+  "Price":12.99,
+  "Type":"retail"
+},
+{
+  "Name":"Costco",
+  "Price":9.99,
+  "Type":"retail"
+},
+{
+  "Name":"NYU",
+  "Price":6562.00,
+  "Type":"retail"
+} ]

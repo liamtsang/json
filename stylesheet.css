@@ -1,0 +1,126 @@
+body {
+  background-color: #1F1F1F;
+  font-family: sans-serif;
+}
+
+#grid{
+  display:grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-column-gap: 0px;
+}
+
+#video{
+  display:flex;
+  flex-direction: column;
+  color: #333333;
+  font-size: 1.4em;
+}
+
+#title{
+  color: #FFFFFF;
+  margin-left: 10px;
+  margin-bottom: 10px;
+}
+
+#cost{
+  color: #FFFFFF;
+  margin-left: 10px;
+}
+#cost h2{
+  font-weight: normal;
+}
+
+#video div{
+  background: #F0F0F0;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 5px;
+  padding-left: 15px;
+  padding-right: 20px;
+  margin: 10px;
+}
+
+#video div h4:nth-child(1){
+  float:left;
+}
+#video div h4:nth-child(2){
+  font-weight: normal;
+  float:right;
+}
+
+#music{
+  display:flex;
+  flex-direction: column;
+  color: #333333;
+  font-size: 1.4em;
+}
+
+#title{
+  color: #FFFFFF;
+  margin-left: 10px;
+  margin-bottom: 10px;
+}
+
+#music div{
+  background: #F0F0F0;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 5px;
+  padding-left: 15px;
+  padding-right: 20px;
+  margin: 10px;
+}
+
+#music div h4:nth-child(1){
+  float:left;
+}
+#music div h4:nth-child(2){
+  font-weight: normal;
+  float:right;
+}
+
+#games{
+  display:flex;
+  flex-direction: column;
+  color: #333333;
+  font-size: 1.4em;
+}
+
+#games div{
+  background: #F0F0F0;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 5px;
+  padding-left: 15px;
+  padding-right: 20px;
+  margin: 10px;
+}
+
+#games div h4:nth-child(1){
+  float:left;
+}
+#games div h4:nth-child(2){
+  font-weight: normal;
+  float:right;
+}
+
+#retail{
+  display:flex;
+  flex-direction: column;
+  color: #333333;
+  font-size: 1.4em;
+}
+
+#retail div{
+  background: #F0F0F0;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 5px;
+  padding-left: 15px;
+  padding-right: 20px;
+  margin: 10px;
+}
+
+#retail div h4:nth-child(1){
+  float:left;
+}
+#retail div h4:nth-child(2){
+  font-weight: normal;
+  float:right;
+}
